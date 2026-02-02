@@ -7,7 +7,7 @@ export const CustomFooter = () => {
             <div>
               <h3 className="font-semibold mb-4">Cocos Tienda</h3>
               <p className="text-sm text-muted-foreground">
-                Ropa inspirada en el diseño minimalista y la innovación de Tesla.
+               COCOS A LA ORDEN
               </p>
             </div>
             
@@ -43,7 +43,7 @@ export const CustomFooter = () => {
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Tesla Style. Todos los derechos reservados.</p>
+            <p>2026. COCOS TIENDA</p>
           </div>
         </div>
       </footer>

@@ -9,7 +9,7 @@ export const HomePage = () => {
         className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
       />
       <div className="relative z-10">
-        <CustomJumbotron title="Cocos" subTitle="los mejores cocos de la ciudad " />
+        <CustomJumbotron title="bodega la cocada" subTitle="sin cocos no hay paraíso" />
       </div>
     </div>
   )
