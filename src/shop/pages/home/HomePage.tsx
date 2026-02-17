@@ -41,15 +41,6 @@ export const HomePage = () => {
               Descubre nuestra selección premium de productos derivados del coco.
             </p>
 
-            {/* Botones de Acción (Ejemplo restaurado) */}
-             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link to="/product/all">
-                <Button size="lg" className="w-full sm:w-auto text-lg h-12 px-8 bg-white text-black hover:bg-gray-100 font-semibold rounded-full transition-all hover:scale-105">
-                  <ShoppingBag className="mr-2 h-5 w-5" />
-                  Comprar Ahora
-                </Button>
-              </Link>
-            </div>
 
           </div>
         </div>
