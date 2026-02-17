@@ -1,30 +1,41 @@
 import React from 'react';
-import { Plus, UserPlus, FileText, Settings, Download, Upload } from 'lucide-react';
+import { Plus, UserPlus } from 'lucide-react';
+import { Link } from 'react-router'; // Importamos Link
 
 const QuickActions: React.FC = () => {
+  // Definimos solo las acciones que tu sistema soporta actualmente
   const actions = [
-    { icon: Plus, label: 'New Project', color: 'bg-blue-500 hover:bg-blue-600' },
-    { icon: UserPlus, label: 'Add User', color: 'bg-green-500 hover:bg-green-600' },
-    { icon: FileText, label: 'Generate Report', color: 'bg-purple-500 hover:bg-purple-600' },
-    { icon: Download, label: 'Export Data', color: 'bg-orange-500 hover:bg-orange-600' },
-    { icon: Upload, label: 'Import Data', color: 'bg-teal-500 hover:bg-teal-600' },
-    { icon: Settings, label: 'Settings', color: 'bg-gray-500 hover:bg-gray-600' },
+    { 
+      icon: Plus, 
+      label: 'Nuevo Producto', 
+      color: 'bg-blue-600 hover:bg-blue-700',
+      to: '/admin/products/new' // Ruta real
+    },
+    { 
+      icon: UserPlus, 
+      label: 'Registrar Usuario', 
+      color: 'bg-purple-600 hover:bg-purple-700',
+      to: '/admin/users/new' // Ruta real
+    },
   ];
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-      <div className="grid grid-cols-2 gap-3">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">Acciones Rápidas</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {actions.map((action, index) => {
           const Icon = action.icon;
           return (
-            <button
+            <Link
               key={index}
-              className={`flex items-center space-x-3 p-3 rounded-lg text-white transition-colors ${action.color}`}
+              to={action.to}
+              className={`flex items-center space-x-3 p-4 rounded-lg text-white transition-all shadow-sm hover:shadow-md ${action.color}`}
             >
-              <Icon size={18} />
-              <span className="text-sm font-medium">{action.label}</span>
-            </button>
+              <div className="p-2 bg-white/20 rounded-full">
+                <Icon size={20} />
+              </div>
+              <span className="font-medium">{action.label}</span>
+            </Link>
           );
         })}
       </div>

@@ -10,9 +10,9 @@ export const CustomHeader = () => {
 
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b backdrop-blur bg-slate-50">
+    <header className="sticky top-0 z-50 w-full border-b backdrop-blur bg-zinc-950">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between text-white">
           {/* Logo */}
           {/* <CustomLogo /> */}
           COCOS
